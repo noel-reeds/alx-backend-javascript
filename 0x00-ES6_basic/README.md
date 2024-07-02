@@ -11,6 +11,7 @@ Object creation and their properties in ES6
 Iterators and for-of loops  
 
 ## Resources  
+[What does ES6 mean / do](https://www.reddit.com/r/learnprogramming/comments/huyf1j/what_does_es6_mean_do_should_l_learn_this_version/).  
 [ECMAScript 6 - ECMAScript 2015](https://www.w3schools.com/js/js_es6.asp)  
 [Statements and declarations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements)  
 [Arrow Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)  
