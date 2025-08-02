@@ -15,7 +15,7 @@ export default class ALXCourse {
     } else {
       throw Error('Students must be an array of Strings');
     }
-  }
+ }
 
   get name() {
     return this._name;
