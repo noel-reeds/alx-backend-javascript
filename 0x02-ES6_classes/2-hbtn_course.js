@@ -13,7 +13,7 @@ export default class ALXCourse {
     if (typeof value === 'string') {
       this._name = value;
     } else {
-      throw Error('Name must be a string');
+      throw new Error('Name must be a string');
     }
   }
 
@@ -25,7 +25,7 @@ export default class ALXCourse {
     if (typeof value === 'number') {
       this._length = value;
     } else {
-      throw Error('Length must be a number');
+      throw new Error('Length must be a number');
     }
   }
 
@@ -37,7 +37,7 @@ export default class ALXCourse {
     if (Array.isArray(value) && value.every((student) => typeof student === 'string')) {
       this._students = value;
     } else {
-      throw Error('Students must be an array of Strings');
+      throw new Error('Students must be an array of Strings');
     }
   }
 }
