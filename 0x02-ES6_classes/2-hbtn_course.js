@@ -21,8 +21,12 @@ export default class ALXCourse {
     return this._name;
   }
 
-  set name(name) {
-    this._name = name;
+  set name(value) {
+    if (typeof value === 'string') {
+      this._name = value;
+    } else {
+      throw Error('Name must be a string');
+    }
   }
 
   get length() {
@@ -30,7 +34,11 @@ export default class ALXCourse {
   }
 
   set length(length) {
-    this._length = length;
+    if (typeof length === 'number') {
+      this._length = length;
+    } else {
+      throw Error('Length must be a number');
+    }
   }
 
   get students() {
@@ -38,6 +46,10 @@ export default class ALXCourse {
   }
 
   set students(students) {
-    this._students = students;
+    if (typeof students === 'object') {
+      this._students = students;
+    } else {
+      throw Error('Students must be an array of Strings');
+    }
   }
 }
