@@ -1,9 +1,9 @@
 export default class ALXCourse {
   constructor(name, length, students) {
-      this._name = name;
-      this._length = length;
-      this._students = students;
-   }
+    this._name = name;
+    this._length = length;
+    this._students = students;
+  }
 
   get name() {
     return this._name;
@@ -22,7 +22,7 @@ export default class ALXCourse {
   }
 
   set length(value) {
-    if (typeof length === 'number') {
+    if (typeof value === 'number') {
       this._length = value;
     } else {
       throw Error('Length must be a number');
