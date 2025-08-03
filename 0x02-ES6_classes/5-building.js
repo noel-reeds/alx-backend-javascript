@@ -2,10 +2,14 @@ export default class Building {
   constructor(sqft) {
     this._sqft = sqft;
 
-    // when a subClass extends from this class
-    // and does not implement `certainMethod()`, throw an error.
-    // this should happen only when `subClass extends baseClass` and not with `new` keyword
-    // object creation.
+    // check only happends when objects are created with extended classes
+    const methods = Object.getOwnPropertyNames(Object.getPrototypeOf(this));
+    if (!methods.includes('evacuationWarningMessage ')) {
+      throw Error('Class extending Building must override evacuationWarningMessage');
+    }
+  }
+  static method() {
+    return 5 * 5;
   }
 
   get sqft() {
