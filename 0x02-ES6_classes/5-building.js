@@ -2,12 +2,11 @@ export default class Building {
   constructor(sqft) {
     this._sqft = sqft;
 
-    // check only happends when objects are created with extended classes
-    const methods = Object.getOwnPropertyNames(Object.getPrototypeOf(this));
-    if (!methods.includes('evacuationWarningMessage ')) {
+    if (new.target !== Building && typeof this.evacuationWarningMessage !== 'function') {
       throw Error('Class extending Building must override evacuationWarningMessage');
     }
   }
+
   static method() {
     return 5 * 5;
   }
