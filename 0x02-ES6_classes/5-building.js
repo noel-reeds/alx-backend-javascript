@@ -2,13 +2,10 @@ export default class Building {
   constructor(sqft) {
     this._sqft = sqft;
 
-    if (new.target !== 'Building') {
-      const proto = Object.getPrototypeOf(this);
-      if (Object.getOwnPropertyNames(proto).includes('evacuationWarningMessage')) {
-        return;
-      }
-      throw new Error('Class extending Building must override evacuationWarningMessage');
-    }
+    // when a subClass extends from this class
+    // and does not implement `certainMethod()`, throw an error.
+    // this should happen only when `subClass extends baseClass` and not with `new` keyword
+    // object creation.
   }
 
   get sqft() {
