@@ -4,11 +4,13 @@ export default class ALXClass {
     this._location = location;
   }
 
-  valueOf() {
-    return this._size;
-  }
-
-  toString() {
-    return this._location;
+  [Symbol.toPrimitive](coerce) {
+    if (coerce === 'number') {
+      return this._size;
+    }
+    if (coerce === 'string') {
+      return this._location;
+    }
+    return coerce;
   }
 }
