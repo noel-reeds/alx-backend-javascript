@@ -7,10 +7,6 @@ export default class Building {
     }
   }
 
-  static method() {
-    return 5 * 5;
-  }
-
   get sqft() {
     return this._sqft;
   }
