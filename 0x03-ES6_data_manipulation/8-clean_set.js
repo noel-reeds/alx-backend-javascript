@@ -1,5 +1,5 @@
 export default function cleanSet(set, startString) {
-  if (typeof startString !== 'string') {
+  if (typeof startString !== 'string' || arguments.length !== 2) {
     return '';
   }
   let appendStr = '';
