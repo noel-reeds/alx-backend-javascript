@@ -1,4 +1,7 @@
 export default function cleanSet(set, startString) {
+  if (typeof startString !== 'string') {
+    return ''
+  }
   let appendStr = '';
   for (const str of set.values()) {
     if (str.startsWith(startString) && startString.length !== 0) {
