@@ -33,10 +33,10 @@ locationCols.innerText = "location";
 hr.append(nameCols, locationCols);
 table.appendChild(hr);
 
-for (const m = 0; m < studentsList.length; m++) {
+for (let m = 0; m < studentsList.length; m++) {
   // create a row for every student
   const row = document.createElement("tr");
-  for (const r = 0; r < 2; r++) {
+  for (let r = 0; r < 2; r++) {
     const nameTd = document.createElement("td");
     const nameText = document.createTextNode(`${studentsList[r].firstName}`);
     const locationTd = document.createElement("td");
