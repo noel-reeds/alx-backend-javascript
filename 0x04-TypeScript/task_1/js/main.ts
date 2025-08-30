@@ -18,4 +18,30 @@ interface printTeacherFunction {
 
 function printTeacher(teacher: printTeacherFunction) {
   return teacher.firstName[0] + `. ${teacher.lastName}`;
-};
+}
+
+interface cls {
+  workOnHomework(): string;
+  displayName(): string;
+}
+
+interface cs {
+  firstName: string;
+  lastName: string;
+}
+
+class StudentClass implements cls {
+  firstName: string;
+  lastName: string;
+
+  constructor(parameters: cs) {
+    this.firstName = parameters.firstName;
+    this.lastName = parameters.lastName;
+  }
+  workOnHomework() {
+    return "Currently working";
+  }
+  displayName() {
+    return this.firstName;
+  }
+}
